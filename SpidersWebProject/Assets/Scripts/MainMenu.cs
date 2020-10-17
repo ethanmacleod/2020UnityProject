@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject settingsPanel;
+
+    private void Start()
+    {
+        settingsPanel.SetActive(false);
+    }
+
     public void Playbutton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
