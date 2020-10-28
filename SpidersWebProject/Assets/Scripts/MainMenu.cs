@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
+    public GameObject levelSelectPanel;
 
     private void Start()
     {
         settingsPanel.SetActive(false);
+        levelSelectPanel.SetActive(false);
     }
 
     public void Playbutton()

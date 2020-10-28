@@ -11,27 +11,19 @@ public class MainEvents : MonoBehaviour
     private Coroutine co_HideCursor;
 
     //pause menu panel
-    [SerializeField] private GameObject pausePanel;
-
-    //For timer
-    public TMP_Text timerText;
-    private float theTime;
-    public float timeMultiplier;
+    public GameObject pausePanel;
 
     private void Start()
-    {
+    {   
+        // A simple way to cheese a bug i keep running into, just ignore this
+        Time.timeScale = 1;
+
         //PAUSE MENU IS DEFAULT DISABLED
         pausePanel.SetActive(false);
     }
 
     void Update()
     {
-        //For the timer
-        theTime = Time.deltaTime * timeMultiplier;
-        string minutes = Mathf.Floor((theTime % 3600)/60).ToString("00");
-        string seconds = (theTime % 60).ToString("00");
-        timerText.text = minutes + ":" + seconds;
-
         //hide cursor corountine
         if (Input.GetAxis("Mouse X") == 0 && (Input.GetAxis("Mouse Y") == 0))
         {
@@ -63,6 +55,7 @@ public class MainEvents : MonoBehaviour
             }
         }
     }
+
     //Hiding Cursor
     private IEnumerator HideCursor()
     {
