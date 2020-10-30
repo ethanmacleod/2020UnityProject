@@ -8,11 +8,16 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
     public GameObject levelSelectPanel;
+    public GameObject levelSelectPanel2;
 
     private void Start()
     {
         settingsPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
+        levelSelectPanel2.SetActive(false);
+
+        //little bug fix - just ignore it
+        Cursor.visible = true;
     }
 
     public void Playbutton()

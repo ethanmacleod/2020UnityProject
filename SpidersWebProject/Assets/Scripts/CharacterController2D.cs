@@ -63,6 +63,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 extraJumps--;
+                GetComponent<AudioSource>().Play();
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
             {

@@ -16,14 +16,24 @@ public class SceneChanger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")
-        {
-            SceneManager.LoadScene(nextSceneLoad);
+        {   
+            if(SceneManager.GetActiveScene().buildIndex == 10)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
 
+                SceneManager.LoadScene(nextSceneLoad);
+                
             //Setting Int for Index
             if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
             {
                 PlayerPrefs.SetInt("levelAt", nextSceneLoad);
             }
+            }
+
+
         }
     }
 

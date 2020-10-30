@@ -20,6 +20,8 @@ public class MainEvents : MonoBehaviour
 
         //PAUSE MENU IS DEFAULT DISABLED
         pausePanel.SetActive(false);
+
+        Cursor.visible = true;
     }
 
     void Update()

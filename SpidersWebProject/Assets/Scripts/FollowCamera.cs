@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FollowCamera : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class FollowCamera : MonoBehaviour
     public float rightLimit;
     public float topLimit;
     public float bottomLimit;
+
+    // variable for the background cheese im going to do
+    public Image backgroundImage;
 
 
     void Start()
